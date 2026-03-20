@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema({
-  email: String,
-  password: String
+const SongSchema = new mongoose.Schema({
+  title: String,
+  status: { type: String, default: "pending_user_approval" }
 });
 
-module.exports = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("Song", SongSchema);
